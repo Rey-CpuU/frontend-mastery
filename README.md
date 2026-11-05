@@ -30,19 +30,9 @@
 
 Skill ini bukan template untuk satu genre saja. Ia dirancang untuk merancang antarmuka apa pun—mulai dari Landing Page SaaS, E-Commerce, Portofolio Editorial, hingga Dashboard Aplikasi—dengan standar estetika tinggi tanpa terjebak *AI-slop*:
 
-```text
-┌────────────────────────────────────────┐   ┌────────────────────────────────────────┐
-│ DIRECTION A: MINIMALIST SAAS HERO      │   │ DIRECTION B: MODERN COMPONENT CRAFT    │
-├────────────────────────────────────────┤   ├────────────────────────────────────────┤
-│ HYPERTHINK.                            │   │ ✦ OPTICAL ALIGNMENT & MOTION           │
-│                                        │   │                                        │
-│ The canvas for engineers               │   │ • Spring Physics : { m:0.8, k:280 }    │
-│ who think in systems.                  │   │ • Exit Velocity  : 30% Faster          │
-│                                        │   │ • Border Radius  : 6px (Crisp)         │
-│ [ Claim your workspace ➔ ]             │   │                                        │
-│ No credit card required. Free tier.    │   │ [ ▶ Play Micro-Interaction ]           │
-└────────────────────────────────────────┘   └────────────────────────────────────────┘
-```
+<p align="center">
+  <img src="assets/preview.png" alt="Frontend Design Mastery Showcase Preview" width="100%" />
+</p>
 
 <details>
 <summary><strong>👉 Klik di sini untuk melihat perbandingan Before vs After (AI Biasa vs Frontend Mastery)</strong></summary>

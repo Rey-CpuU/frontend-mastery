@@ -23,16 +23,16 @@
 <p align="center">
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License: MIT"></a>
   <a href="https://github.com/Rey-CpuU/frontend-mastery"><img src="https://img.shields.io/badge/Platform-Antigravity%20%2F%20Gemini-8E75FF?style=flat-square" alt="Platform"></a>
-  <a href="#-7-topologi-detail-box-ascii-architecture"><img src="https://img.shields.io/badge/Craft-Anti--AI--Slop%20Certified-10B981?style=flat-square" alt="Quality"></a>
-  <a href="#9-audit-aksesibilitas-deterministik-wcag-22-aaa"><img src="https://img.shields.io/badge/A11y-WCAG%202.2%20AAA-F59E0B?style=flat-square" alt="A11y"></a>
-  <a href="#10-audit-core-web-vitals--zero-cls"><img src="https://img.shields.io/badge/Web%20Vitals-Zero--CLS%20Guard-06B6D4?style=flat-square" alt="Web Vitals"></a>
+  <a href="#-3-fitur-utama"><img src="https://img.shields.io/badge/Craft-Anti--AI--Slop%20Certified-10B981?style=flat-square" alt="Quality"></a>
+  <a href="references/a11y-perfection.md"><img src="https://img.shields.io/badge/A11y-WCAG%202.2%20AAA-F59E0B?style=flat-square" alt="A11y"></a>
+  <a href="references/web-vitals-guard.md"><img src="https://img.shields.io/badge/Web%20Vitals-Zero--CLS%20Guard-06B6D4?style=flat-square" alt="Web Vitals"></a>
 </p>
 
 </div>
 
 ---
 
-## 📸 2. Demo & Preview
+## 📸 1. Demo & Preview
 
 ```text
 $ .\fdm explore "Autonomous Cloud Gateway"
@@ -57,7 +57,7 @@ Synthesizing 3 Contrasting Aesthetic Directions:
 
 ---
 
-## ⚡ 3. Kenapa Skill Ini?
+## ⚡ 2. Kenapa Skill Ini?
 
 Model AI secara default adalah penghasil **"AI-Slop"**: tombol gradasi ungu-biru neon, font Inter tanpa karakter, `shadow-2xl` melayang tanpa hierarki, dan layout kaku yang merusak kredibilitas produk.
 
@@ -69,7 +69,7 @@ Model AI secara default adalah penghasil **"AI-Slop"**: tombol gradasi ungu-biru
 
 ---
 
-## 💎 4. Fitur Utama
+## 💎 3. Fitur Utama
 
 | Fitur | Kategori | Penjelasan Ringkas |
 | :--- | :--- | :--- |
@@ -80,7 +80,7 @@ Model AI secara default adalah penghasil **"AI-Slop"**: tombol gradasi ungu-biru
 | **UX Micro-Copy Writing** | Human Interface | Mengeliminasi kata klise (*"Get Started"*) & menerapkan formula error 3 bagian. |
 | **5-State Architecture** | Ketahanan Edge-case | Wajib mencakup *Loading Skeleton (Anti-CLS), Empty, Error, Truncated (80-char), & Ideal*. |
 | **Spatial Ergonomics** | Mobile-First | Penempatan aksi utama di Thumb-Zone (40% bawah) & adaptasi Bottom-Sheet. |
-| **Strict Anti-Slop Blacklist** | Quality Gate | 30+ filter otomatis yang melarang elemen visual murahan dan kode tidak terstruktur. |
+| **Strict Anti-Slop Blacklist** | Quality Gate | 55 filter otomatis yang melarang elemen visual murahan dan kode tidak terstruktur. |
 | **Deterministic A11y** | Standar Aksesibilitas | Audit WCAG 2.2 AAA, Focus-Trap pada modal, dan pengumuman `aria-live`. |
 | **Core Web Vitals Guard** | Performa Render | Menjaga skor LCP, zero layout shifts (CLS), dan animasi compositor-only (INP). |
 | **Visual Verifier Protocol** | Inspeksi Nyata | Panduan inspeksi visual di browser nyata pada viewport 375px dan 1440px. |
@@ -88,7 +88,7 @@ Model AI secara default adalah penghasil **"AI-Slop"**: tombol gradasi ungu-biru
 
 ---
 
-## 🚀 5. Quick Start
+## 🚀 4. Quick Start
 
 Jalankan 3 langkah ini di terminal Anda untuk langsung mulai:
 
@@ -105,7 +105,7 @@ cd C:\Users\advan\.gemini\config\skills\frontend-design-mastery
 
 ---
 
-## 🔄 6. Cara Kerja (Step-by-Step)
+## 🔄 5. Cara Kerja (Step-by-Step)
 
 ```text
 [Input Prompt] ──► [1. Dials & Direction] ──► [2. Token Lock] ──► [3. Assembly] ──► [4. Visual Verifier] ──► [5. Gatekeeper] ──► [Production Code]
@@ -129,7 +129,7 @@ cd C:\Users\advan\.gemini\config\skills\frontend-design-mastery
 
 ---
 
-## 🗺️ 7. Topologi "Detail Box ASCII Architecture"
+## 🗺️ 6. Topologi Arsitektur (ASCII Box Architecture)
 
 <div align="center">
 
@@ -164,20 +164,20 @@ cd C:\Users\advan\.gemini\config\skills\frontend-design-mastery
         ▼
  ┌───────────────────────────────────────────────────────────────────────────┐
  │ LAYER 2: PATTERNS & SYSTEMS (search.py & core.py)                         │
- │ Peran: Query 67 styles, 96 palettes, 13 stack adapters, & slot pattern    │
+ │ Peran: Query 21 styles, 37 palettes, 13 stack adapters, & slot pattern    │
  │ Input: Token MASTER.md | Output: Struktur komponen & layout bersih        │
  └───────────────────────────────────────────────────────────────────────────┘
         │
         ▼
  ┌───────────────────────────────────────────────────────────────────────────┐
- │ LAYER 3: CRAFT & POLISH ENGINE (taste-and-polish.md & motion.md)          │
+ │ LAYER 3: CRAFT & POLISH ENGINE (taste-and-polish.md & motion-choreography.md)          │
  │ Peran: Suntikkan Spring Physics, 5-State, Micro-Copy, & Thumb-Zone        │
  │ Input: Layout dasar | Output: Komponen berdensitas tinggi & berkarakter   │
  └───────────────────────────────────────────────────────────────────────────┘
         │
         ▼
  ┌───────────────────────────────────────────────────────────────────────────┐
- │ VISUAL VERIFIER & REAL BROWSER (visual-verifier.md & inspect.mjs)         │
+ │ VISUAL VERIFIER & REAL BROWSER (visual-verifier.md & browser viewport)         │
  │ Peran: Inspeksi render nyata di viewport mobile 375px & 1440px            │
  │ Input: Source code komponen | Output: Laporan visual defect & overflow    │
  └───────────────────────────────────────────────────────────────────────────┘
@@ -206,7 +206,7 @@ Legenda:
 
 ---
 
-## 💬 8. Panduan Prompt Lengkap Per Fitur
+## 💬 7. Panduan Prompt Lengkap Per Fitur
 
 Gunakan prompt di bawah ini untuk memicu kapabilitas spesifik sistem:
 
@@ -327,7 +327,7 @@ Periksa performa rendering komponen hero ini: pastikan semua media memiliki aspe
 
 ---
 
-## 📂 9. Struktur Folder
+## 📂 8. Struktur Folder
 
 ```text
 frontend-design-mastery/
@@ -378,7 +378,7 @@ frontend-design-mastery/
 
 ---
 
-## 🎨 10. Katalog Contoh & Craft Primitives
+## 🎨 9. Katalog Contoh & Craft Primitives
 
 Skill ini dilengkapi dengan komponen *production-grade* yang telah dibersihkan dari "AI-Slop" (tanpa neon murahan, aman dari layout shift, dan patuh `prefers-reduced-motion`):
 
@@ -397,7 +397,7 @@ Skill ini dilengkapi dengan komponen *production-grade* yang telah dibersihkan d
 
 ---
 
-## ❓ 11. FAQ
+## ❓ 10. FAQ
 
 <details>
 <summary><strong>Apakah skill ini hanya bisa digunakan untuk Tailwind CSS?</strong></summary>
@@ -425,7 +425,7 @@ Prompt biasa hanya memberi instruksi teks pendek. Skill ini adalah sistem terstr
 
 ---
 
-## 🤝 12. Kontribusi, Lisensi & Kontak
+## 🤝 11. Kontribusi, Lisensi & Kontak
 
 * **Lisensi:** Proyek ini dilisensikan di bawah [MIT License](LICENSE). Bebas digunakan, dimodifikasi, dan didistribusikan untuk proyek personal maupun komersial.
 * **Kontribusi:** Pull Request dan kontribusi aturan baru pada `taste-blacklist.csv` atau modul referensi sangat diapresiasi! Silakan fork dan buat branch baru.

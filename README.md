@@ -28,21 +28,11 @@
 
 ## 📸 2. Demo & Preview
 
-```text
-┌─────────────────────────────────────────────────────────────────────────────┐
-│ INSTITUTIONAL LIQUIDITY GATEWAY v4.2                 [Filter] [Deploy Funds]│
-├─────────────────────────────────────────────────────────────────────────────┤
-│ Total Settled       Aggregated Slippage    Pending Clearance   Efficiency   │
-│ $48,924,180.20 ▲    0.0034 bps ▲           $1,240,500.00 ▼     99.992% ▲    │
-│ vs 24h cycle        Target <= 0.005 bps    3 Batches           0 packet drop│
-├─────────────────────────────────────────────────────────────────────────────┤
-│ [All Tranches] [Settled] [Pending]               [Search routing hash...   ]│
-│ 0x8f2a...c31b  USDC/EUR-T     $1,200,000.00    [ Settled ]   12ms latency   │
-│ 0x3d91...10af  SOL/USD-Prime  $430,210.50      [ Settled ]   18ms latency   │
-│ 0x17c4...88ee  WBTC/USDC-Arb  $2,850,000.00    [ Pending ]   44ms latency   │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
-*Tampilan di atas adalah hasil riil komponen berstandar High-Craft Telemetry yang digenerate oleh skill ini: zero neon slop, 1px subtle hairline border, tabular typography, dan layout asimetris bervolume tinggi.*
+<p align="center">
+  <img src="assets/preview.png" alt="Frontend Design Mastery Telemetry Preview" width="100%" />
+</p>
+
+> **Sample Output:** Komponen *Institutional Liquidity Gateway* berstandar High-Craft Telemetry yang digenerate oleh skill ini. Memiliki hierarki visual hening, *hairline borders* tipis (`rgba(255,255,255,0.08)`), tipografi monospaced tabular, dan nol elemen *AI-slop*.
 
 ---
 

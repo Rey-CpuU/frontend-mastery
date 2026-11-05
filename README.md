@@ -134,68 +134,68 @@ cd C:\Users\advan\.gemini\config\skills\frontend-design-mastery
 <div align="center">
 
 <pre>
-┌─────────────────────────────────────────────────────────────────────────────┐
-│ TOPOLOGI ARSITEKTUR: FRONTEND DESIGN MASTERY ENGINE                         │
-└─────────────────────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────────────────┐
+│ TOPOLOGI ARSITEKTUR: FRONTEND DESIGN MASTERY ENGINE                       │
+└───────────────────────────────────────────────────────────────────────────┘
 
- [USER INPUT BRIEF]
-        │
-        ▼
- ┌───────────────────────────────────────────────────────────────────────────┐
- │ STEP 0: CALIBRATION & DIALS                                               │
- │ Peran: Menentukan framework target dan 5 slider rasa                      │
- │ Input: Brief teks | Output: Framework target & parameter Dial [1-3]       │
- └───────────────────────────────────────────────────────────────────────────┘
-        │
-        ▼
- ┌───────────────────────────────────────────────────────────────────────────┐
- │ STEP 1: MULTI-DIRECTION EXPLORATION (oil-ui engine)                       │
- │ Peran: Menyajikan 3 variasi estetika kontras side-by-side                 │
- │ Input: Parameter Dial | Output: 3 Konsep (Minimalist/Structured/Warm)     │
- └───────────────────────────────────────────────────────────────────────────┘
-        │
-        ▼
- ┌───────────────────────────────────────────────────────────────────────────┐
- │ LAYER 1: FOUNDATIONS & SYSTEM LOCK (foundations.md & design_system.py)    │
- │ Peran: Ritme spasi 4px, skala modular, HSL token, & simpan MASTER.md      │
- │ Input: Pilihan arah desain | Output: File design-system/MASTER.md         │
- └───────────────────────────────────────────────────────────────────────────┘
-        │
-        ▼
- ┌───────────────────────────────────────────────────────────────────────────┐
- │ LAYER 2: PATTERNS & SYSTEMS (search.py & core.py)                         │
- │ Peran: Query 21 styles, 37 palettes, 13 stack adapters, & slot pattern    │
- │ Input: Token MASTER.md | Output: Struktur komponen & layout bersih        │
- └───────────────────────────────────────────────────────────────────────────┘
-        │
-        ▼
- ┌───────────────────────────────────────────────────────────────────────────┐
- │ LAYER 3: CRAFT & POLISH ENGINE (taste-and-polish.md & motion-choreography.md)          │
- │ Peran: Suntikkan Spring Physics, 5-State, Micro-Copy, & Thumb-Zone        │
- │ Input: Layout dasar | Output: Komponen berdensitas tinggi & berkarakter   │
- └───────────────────────────────────────────────────────────────────────────┘
-        │
-        ▼
- ┌───────────────────────────────────────────────────────────────────────────┐
- │ VISUAL VERIFIER & REAL BROWSER (visual-verifier.md & browser viewport)         │
- │ Peran: Inspeksi render nyata di viewport mobile 375px & 1440px            │
- │ Input: Source code komponen | Output: Laporan visual defect & overflow    │
- └───────────────────────────────────────────────────────────────────────────┘
-        │
-        ▼
- ┌───────────────────────────────────────────────────────────────────────────┐
- │ STRICT AUDIT GATEKEEPER (taste_audit.py & taste-blacklist.csv)            │
- │ Peran: Filter larangan anti-slop, audit WCAG 2.2 AAA, & Zero-CLS Guard    │
- │ Input: Rendered UI | Output: Verdict (PASS / REJECT & REFACTOR)           │
- └───────────────────────────────────────────────────────────────────────────┘
-        │
-        ├───────────────────────────────────────────┐
-        ▼                                           ▼
- ┌─────────────────────────┐               ┌─────────────────────────────────┐
- │ REJECT & AUTO-REFACTOR  │               │ PASS: DELIVER PRODUCTION CODE   │
- │ Peran: Perbaiki defisit │               │ Output: Kode produksi teruji,   │
- │ alur kembali ke Layer 3 │               │ rapi, & beranotasi lengkap      │
- └─────────────────────────┘               └─────────────────────────────────┘
+                             [USER INPUT BRIEF]
+                                     │
+                                     ▼
+┌───────────────────────────────────────────────────────────────────────────┐
+│ STEP 0: CALIBRATION & DIALS                                               │
+│ Peran: Menentukan framework target dan 5 slider rasa                      │
+│ Input: Brief teks | Output: Framework target & parameter Dial [1-3]       │
+└───────────────────────────────────────────────────────────────────────────┘
+                                     │
+                                     ▼
+┌───────────────────────────────────────────────────────────────────────────┐
+│ STEP 1: MULTI-DIRECTION EXPLORATION (oil-ui engine)                       │
+│ Peran: Menyajikan 3 variasi estetika kontras side-by-side                 │
+│ Input: Parameter Dial | Output: 3 Konsep (Minimalist/Structured/Warm)     │
+└───────────────────────────────────────────────────────────────────────────┘
+                                     │
+                                     ▼
+┌───────────────────────────────────────────────────────────────────────────┐
+│ LAYER 1: FOUNDATIONS & SYSTEM LOCK (foundations.md & design_system.py)    │
+│ Peran: Ritme spasi 4px, skala modular, HSL token, & simpan MASTER.md      │
+│ Input: Pilihan arah desain | Output: File design-system/MASTER.md         │
+└───────────────────────────────────────────────────────────────────────────┘
+                                     │
+                                     ▼
+┌───────────────────────────────────────────────────────────────────────────┐
+│ LAYER 2: PATTERNS & SYSTEMS (search.py & core.py)                         │
+│ Peran: Query 21 styles, 37 palettes, 13 stack adapters, & slot pattern    │
+│ Input: Token MASTER.md | Output: Struktur komponen & layout bersih        │
+└───────────────────────────────────────────────────────────────────────────┘
+                                     │
+                                     ▼
+┌───────────────────────────────────────────────────────────────────────────┐
+│ LAYER 3: CRAFT & POLISH ENGINE (taste-and-polish & motion-choreography)   │
+│ Peran: Suntikkan Spring Physics, 5-State, Micro-Copy, & Thumb-Zone        │
+│ Input: Layout dasar | Output: Komponen berdensitas tinggi & berkarakter   │
+└───────────────────────────────────────────────────────────────────────────┘
+                                     │
+                                     ▼
+┌───────────────────────────────────────────────────────────────────────────┐
+│ VISUAL VERIFIER & REAL BROWSER (visual-verifier.md & browser viewport)    │
+│ Peran: Inspeksi render nyata di viewport mobile 375px & 1440px            │
+│ Input: Source code komponen | Output: Laporan visual defect & overflow    │
+└───────────────────────────────────────────────────────────────────────────┘
+                                     │
+                                     ▼
+┌───────────────────────────────────────────────────────────────────────────┐
+│ STRICT AUDIT GATEKEEPER (taste_audit.py & taste-blacklist.csv)            │
+│ Peran: Filter larangan anti-slop, audit WCAG 2.2 AAA, & Zero-CLS Guard    │
+│ Input: Rendered UI | Output: Verdict (PASS / REJECT & REFACTOR)           │
+└───────────────────────────────────────────────────────────────────────────┘
+                                     │
+                  ┌───────────────────┴───────────────────┐
+                  ▼                                       ▼
+┌─────────────────────────┐               ┌─────────────────────────────────┐
+│ REJECT & AUTO-REFACTOR  │               │ PASS: DELIVER PRODUCTION CODE   │
+│ Peran: Perbaiki defisit │               │ Output: Kode produksi teruji,   │
+│ alur kembali ke Layer 3 │               │ rapi, & beranotasi lengkap      │
+└─────────────────────────┘               └─────────────────────────────────┘
 
 Legenda:
   │ / ▼  : Alur data sekuensial

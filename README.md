@@ -1,6 +1,6 @@
 # Frontend Design Mastery (Unified Hybrid Design Engine)
 
-> **The Definitive Frontend Design Engineering System & AI-Slop Enforcer.**
+> **The Definitive Frontend Design Engineering System & AI-Slop Enforcer.**  
 > Synthesizing world-class intelligence from `ui-ux-pro-max`, `taste-skill`, `impeccable`, `oil-ui`, `claude-design-system`, and `frontend-design-toolkit`.
 
 ---
@@ -9,47 +9,33 @@
 
 ```mermaid
 flowchart TD
-    classDef input fill:#1E293B,stroke:#38BDF8,stroke-width:2px,color:#F8FAFC;
-    classDef layer1 fill:#0F172A,stroke:#64748B,stroke-width:1.5px,color:#E2E8F0;
-    classDef layer2 fill:#1E1B4B,stroke:#818CF8,stroke-width:1.5px,color:#E0E7FF;
-    classDef layer3 fill:#312E81,stroke:#C084FC,stroke-width:2px,color:#FAF5FF;
-    classDef loop fill:#14532D,stroke:#4ADE80,stroke-width:2px,color:#F0FDF4;
-    classDef gatekeeper fill:#450A0A,stroke:#F87171,stroke-width:2px,color:#FEF2F2;
-    classDef output fill:#064E3B,stroke:#34D399,stroke-width:2px,color:#ECFDF5;
+    User["USER REQUEST - Bikin atau Review UI"] --> Step0["0. STACK AND DIALS SELECTION<br/>Tentukan Framework dan Atur Slider Rasa"]
+    Step0 --> Step1["1. MULTI-DIRECTION EXPLORATION<br/>3 Varian: Minimalist, Structured, Expressive"]
 
-    User(["🧑‍💻 USER REQUEST\n'Bikin / Review UI'"]):::input --> Step0["0. STACK & DIALS SELECTION\n• Tentukan Framework (Next.js, Vue, Svelte, dll.)\n• Atur Rasa: Radius, Density, Contrast, Depth"]:::input
-
-    Step0 --> Step1["1. MULTI-DIRECTION EXPLORATION (oil-ui)\nSajikan 3 Varian Visual Kontras:\n[1] Minimalist  [2] Structured Telemetry  [3] Expressive"]:::input
-
-    subgraph L1 ["LAYER 1: FOUNDATIONS & SYSTEM LOCK"]
-        direction TB
-        Tokens["Design Tokens (foundations.md)\n• 4px/8px Spacing Rhythm\n• Modular Type Scale (1.250)\n• Semantic Surface Colors (surface-0/1/2)"]:::layer1
-        Persist["Token Persistence (MASTER.md)\n• Kunci Source of Truth permanen\n• Mencegah inkonsistensi antar sesi chat"]:::layer1
+    subgraph L1["LAYER 1: FOUNDATIONS AND SYSTEM LOCK"]
+        Tokens["Design Tokens<br/>4px Rhythm, Modular Scale, HSL Colors"]
+        Persist["Token Persistence<br/>Kunci Source of Truth di MASTER.md"]
     end
 
-    subgraph L2 ["LAYER 2: PATTERNS, STACKS & SYSTEMS"]
-        direction TB
-        SearchEngine["BM25 Search Engine (search.py)\n• 67 UI Styles & 96 Curated Palettes\n• 13 Stack Adapters (Next, Tailwind, Nuxt, Svelte, dll.)"]:::layer2
-        CleanArch["Architecture & Standards\n• Component Composition (Slot Pattern)\n• Figma-to-Code Mapping (Auto-layout -> Flexbox)\n• Enterprise Tokens (Shopify Polaris / Primer)"]:::layer2
+    subgraph L2["LAYER 2: PATTERNS, STACKS AND SYSTEMS"]
+        SearchEngine["BM25 Search Engine<br/>67 Styles, 96 Palettes, 13 Stacks"]
+        CleanArch["Architecture and Standards<br/>Slot Composition, Figma to Code, Enterprise Tokens"]
     end
 
-    subgraph L3 ["LAYER 3: CRAFT & POLISH ENGINE"]
-        direction TB
-        Motion["Motion Choreography (motion-choreography.md)\n• Real Spring Physics (mass, stiffness, damping)\n• 35ms Stagger Cap | 30% Faster Exit"]:::layer3
-        CopyWriting["UX Micro-Copy (micro-copy-ux-writing.md)\n• Banned Cliché Replacement ('Get Started' -> Action Verbs)\n• 3-Part Error Recovery Architecture"]:::layer3
-        StateMatrix["5-State Coverage (state-matrix-edge-cases.md)\n• Loading Skeleton (Anti-CLS) | Empty | Error | Truncate"]:::layer3
-        Ergonomics["Spatial Ergonomics (spatial-ergonomics.md)\n• Mobile Thumb-Zone (Bottom 40%)\n• Bottom-Sheet Morphing (<768px)"]:::layer3
+    subgraph L3["LAYER 3: CRAFT AND POLISH ENGINE"]
+        Motion["Motion Choreography<br/>Spring Physics, 35ms Stagger, Faster Exit"]
+        CopyWriting["UX Micro-Copy<br/>Banned Cliche Replacement, Error Recovery"]
+        StateMatrix["5-State Coverage<br/>Loading Skeleton Anti-CLS, Empty, Error, Truncate"]
+        Ergonomics["Spatial Ergonomics<br/>Mobile Thumb-Zone, Bottom-Sheet Morphing"]
     end
 
-    subgraph VLoop ["VISUAL VERIFIER & EYE (taste-skill / shoot.mjs)"]
-        direction TB
-        Inspect["Real-Browser Inspection\n• Viewport 375px & 1440px Check\n• Deteksi Horizontal Overflow & Bad Tap Targets"]:::loop
+    subgraph VLoop["VISUAL VERIFIER AND EYE"]
+        Inspect["Real-Browser Inspection<br/>Viewport 375px Check, Overflow Detection"]
     end
 
-    subgraph Gate ["STRICT AUDIT GATEKEEPER"]
-        direction TB
-        BlacklistCheck{"Blacklist Inspection\n(taste-blacklist.csv)\n• Neon Gradients? Generic Inter?\n• Emojis as Icons? Raw Tailwind?"}:::gatekeeper
-        A11yVitalsCheck{"A11y & Vitals Guard\n• Focus Trap on Modals?\n• Zero CLS (Explicit aspect-ratio)?\n• Compositor-only Animations?"}:::gatekeeper
+    subgraph Gate["STRICT AUDIT GATEKEEPER"]
+        BlacklistCheck{"Blacklist Inspection<br/>taste-blacklist.csv"}
+        A11yVitalsCheck{"A11y and Vitals Guard<br/>Focus Trap, Zero-CLS, Compositor Motion"}
     end
 
     Step1 --> L1
@@ -58,26 +44,26 @@ flowchart TD
     L3 --> VLoop
     VLoop --> Gate
 
-    BlacklistCheck -- "❌ Ada Slop" --> Refactor["Auto-Refactor & Polish"]:::gatekeeper
+    BlacklistCheck -->|Ada Slop| Refactor["Auto-Refactor and Polish"]
     Refactor --> L3
-    BlacklistCheck -- "✅ Clean" --> A11yVitalsCheck
-    A11yVitalsCheck -- "✅ Passes 100%" --> FinalOutput(["🚀 DELIVER HIGH-CRAFT PRODUCTION CODE\n(Annotated, Pixel-Perfect, High-Performance)"]):::output
+    BlacklistCheck -->|Clean| A11yVitalsCheck
+    A11yVitalsCheck -->|Passes 100%| FinalOutput["DELIVER PRODUCTION CODE<br/>Pixel-Perfect, Accessible, High-Craft"]
 ```
 
 ---
 
-## 🛠️ CLI Hub Command Reference (`orchestrate.py`)
+## 🛠️ CLI Hub Command Reference (`fdm` / `orchestrate.py`)
 
 Anda dapat menjalankan perintah terpusat melalui terminal:
 
 | Perintah CLI | Fungsi |
 | :--- | :--- |
-| `python scripts/orchestrate.py dials` | Menampilkan 5 slider kendali rasa (*Radius, Density, Depth, Contrast, Motion*). |
-| `python scripts/orchestrate.py explore "<query>"` | Menghasilkan **3 arah visual kontras** (*Minimalist, Structured Telemetry, Expressive*). |
-| `python scripts/orchestrate.py persist "<query>" -p "Nama"` | Mengunci sistem desain ke file permanen `design-system/MASTER.md`. |
-| `python scripts/orchestrate.py audit --severity CRITICAL` | Memeriksa pelanggaran anti-slop paling fatal. |
-| `python scripts/orchestrate.py a11y` | Menjalankan checklist audit aksesibilitas deterministik (WCAG 2.2 AAA & Focus-trap). |
-| `python scripts/orchestrate.py vitals` | Menjalankan checklist verifikasi Core Web Vitals (Anti-CLS, INP, LCP). |
+| `.\fdm dials` | Menampilkan 5 slider kendali rasa (*Radius, Density, Depth, Contrast, Motion*). |
+| `.\fdm explore "<query>"` | Menghasilkan **3 arah visual kontras** (*Minimalist, Structured Telemetry, Expressive*). |
+| `.\fdm persist "<query>" -p "Nama"` | Mengunci sistem desain ke file permanen `design-system/MASTER.md`. |
+| `.\fdm audit --severity CRITICAL` | Memeriksa pelanggaran anti-slop paling fatal. |
+| `.\fdm a11y` | Menjalankan checklist audit aksesibilitas deterministik (WCAG 2.2 AAA & Focus-trap). |
+| `.\fdm vitals` | Menjalankan checklist verifikasi Core Web Vitals (Anti-CLS, INP, LCP). |
 
 ---
 

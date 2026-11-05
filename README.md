@@ -7,57 +7,62 @@
 
 ## 🏛️ Topologi Arsitektur & Alur Kerja Sistem
 
-```mermaid
-graph TD
-    User["USER REQUEST - Bikin atau Review UI"] --> Step0["0. STACK AND DIALS SELECTION"]
-    Step0 --> Step1["1. MULTI-DIRECTION EXPLORATION"]
-
-    Step1 --> L1["LAYER 1: FOUNDATIONS AND TOKENS"]
-    L1 --> L2["LAYER 2: PATTERNS AND STACKS"]
-    L2 --> L3["LAYER 3: CRAFT AND POLISH ENGINE"]
-    L3 --> VLoop["VISUAL VERIFIER AND EYE"]
-    VLoop --> Gate{"STRICT AUDIT GATEKEEPER"}
-
-    Gate -->|Ada Slop| Refactor["Auto-Refactor and Polish"]
-    Refactor --> L3
-    Gate -->|Passes 100%| FinalOutput["DELIVER PRODUCTION CODE"]
-```
-
 ```text
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                       DETAIL ALUR PROSES ARSITEKTUR                         │
+│                       TOPOLOGI ALUR PROSES ARSITEKTUR                       │
 └─────────────────────────────────────────────────────────────────────────────┘
-  [USER REQUEST]
-        │
-        ▼
-  [0. STACK & DIALS SELECTION] ─────────► Framework: Next.js / Vue / Svelte
-        │                                Dials: Radius, Density, Depth, Motion
-        ▼
-  [1. MULTI-DIRECTION EXPLORATION] ─────► [1] Radical Minimalist
-        │                                [2] Structured Telemetry
-        │                                [3] Expressive Humanist
-        ▼
-  [LAYER 1: FOUNDATIONS] ───────────────► 4px Rhythm, Modular Scale, HSL Colors
-        │                                Token Lock: design-system/MASTER.md
-        ▼
-  [LAYER 2: PATTERNS & SYSTEMS] ────────► 67 Styles, 96 Palettes, 13 Stacks
-        │                                Slot Pattern, Figma-to-Code Mapping
-        ▼
-  [LAYER 3: CRAFT & POLISH] ────────────► Spring Physics (mass, stiffness, damping)
-        │                                5-State Architecture (Anti-CLS Skeleton)
-        │                                Micro-Copywriting & Action Verbs
-        │                                Mobile Thumb-Zone (Bottom 40%)
-        ▼
-  [VISUAL VERIFIER] ────────────────────► Headless Browser & Viewport 375px Check
-        │                                Overflow & Hitbox Inspection
-        ▼
-  [STRICT GATEKEEPER] ──────────────────► taste-blacklist.csv (Anti-Slop Check)
-        │                                WCAG 2.2 AAA A11y (Focus Trap Check)
-        │                                Core Web Vitals (Zero-CLS & INP Guard)
-        │
-   [Passes 100%]
-        ▼
-  [DELIVER PRODUCTION CODE]
+
+                               [USER REQUEST]
+                       ("Bikin UI" atau "Review UI")
+                                     │
+                                     ▼
+                      [0. STACK & DIALS SELECTION]
+                • Framework: Next.js / React / Vue / Svelte
+                • Dials: Radius, Density, Depth, Motion
+                                     │
+                                     ▼
+                      [1. MULTI-DIRECTION EXPLORATION]
+                • [1] Radical Minimalist (High Whitespace)
+                • [2] Structured Telemetry (Linear/Raycast)
+                • [3] Expressive Humanist (Organic/Warm)
+                                     │
+                                     ▼
+                      [LAYER 1: FOUNDATIONS & SYSTEM LOCK]
+                • 4px Spacing Rhythm & Modular Type Scale
+                • Token Lock: design-system/MASTER.md
+                                     │
+                                     ▼
+                      [LAYER 2: PATTERNS & SYSTEMS]
+                • BM25 Engine: 67 Styles & 96 Palettes
+                • 13 Framework Stack Adapters
+                • Component Slot Pattern & Figma-to-Code
+                                     │
+                                     ▼
+                      [LAYER 3: CRAFT & POLISH ENGINE]
+                • Spring Physics (mass, stiffness, damping)
+                • 5-State Architecture (Anti-CLS Skeletons)
+                • UX Micro-Copy (Anti-Cliché Action Verbs)
+                • Spatial Ergonomics (Thumb-Zone Bottom 40%)
+                                     │
+                                     ▼
+                      [VISUAL VERIFIER & REAL BROWSER]
+                • Viewport 375px & 1440px Verification
+                • Overflow & Tap Target Inspection
+                                     │
+                                     ▼
+                      [STRICT AUDIT GATEKEEPER]
+                • taste-blacklist.csv (Anti-Slop Check)
+                • WCAG 2.2 AAA (Focus-Trap & A11y Guard)
+                • Core Web Vitals (Zero-CLS & INP Guard)
+                                     │
+            ┌────────────────────────┴────────────────────────┐
+            │                                                 │
+      [Ada Slop / Defect]                               [Passes 100%]
+            │                                                 │
+            ▼                                                 ▼
+  [Auto-Refactor & Polish]                        [DELIVER PRODUCTION CODE]
+            │                                     (Pixel-Perfect, Accessible,
+            └───────────► (Re-audit)               Annotated High-Craft Code)
 ```
 
 ---

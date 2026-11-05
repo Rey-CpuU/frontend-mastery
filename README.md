@@ -131,7 +131,9 @@ cd C:\Users\advan\.gemini\config\skills\frontend-design-mastery
 
 ## 🗺️ 7. Topologi "Detail Box ASCII Architecture"
 
-```text
+<div align="center">
+
+<pre>
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │ TOPOLOGI ARSITEKTUR: FRONTEND DESIGN MASTERY ENGINE                         │
 └─────────────────────────────────────────────────────────────────────────────┘
@@ -198,7 +200,9 @@ cd C:\Users\advan\.gemini\config\skills\frontend-design-mastery
 Legenda:
   │ / ▼  : Alur data sekuensial
   ┌ ─ ┐  : Batas komponen sistem terisolasi
-```
+</pre>
+
+</div>
 
 ---
 

@@ -26,13 +26,15 @@
 
 ---
 
-## 📸 2. Demo & Preview: The Power of Multi-Direction & Craft
+## 📸 2. Demo & Preview: Multi-Direction Visual Ideation
 
 Skill ini bukan template untuk satu genre saja. Ia dirancang untuk merancang antarmuka apa pun—mulai dari Landing Page SaaS, E-Commerce, Portofolio Editorial, hingga Dashboard Aplikasi—dengan standar estetika tinggi tanpa terjebak *AI-slop*:
 
 <p align="center">
-  <img src="assets/preview.png" alt="Frontend Design Mastery Showcase Preview" width="100%" />
+  <img src="assets/preview.png" alt="Frontend Design Mastery Multi-Direction Preview" width="100%" />
 </p>
+
+*Contoh riil hasil render dua arah estetika kontras (*Direction A: Minimalist SaaS* vs *Direction B: Tactical Component Craft*) yang di-generate dengan palet semantik, ritme spasi 4px, dan parameter spring physics nyata.*
 
 <details>
 <summary><strong>👉 Klik di sini untuk melihat perbandingan Before vs After (AI Biasa vs Frontend Mastery)</strong></summary>

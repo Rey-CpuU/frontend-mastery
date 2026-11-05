@@ -8,46 +8,56 @@
 ## 🏛️ Topologi Arsitektur & Alur Kerja Sistem
 
 ```mermaid
-flowchart TD
-    User["USER REQUEST - Bikin atau Review UI"] --> Step0["0. STACK AND DIALS SELECTION<br/>Tentukan Framework dan Atur Slider Rasa"]
-    Step0 --> Step1["1. MULTI-DIRECTION EXPLORATION<br/>3 Varian: Minimalist, Structured, Expressive"]
+graph TD
+    User["USER REQUEST - Bikin atau Review UI"] --> Step0["0. STACK AND DIALS SELECTION"]
+    Step0 --> Step1["1. MULTI-DIRECTION EXPLORATION"]
 
-    subgraph L1["LAYER 1: FOUNDATIONS AND SYSTEM LOCK"]
-        Tokens["Design Tokens<br/>4px Rhythm, Modular Scale, HSL Colors"]
-        Persist["Token Persistence<br/>Kunci Source of Truth di MASTER.md"]
-    end
+    Step1 --> L1["LAYER 1: FOUNDATIONS AND TOKENS"]
+    L1 --> L2["LAYER 2: PATTERNS AND STACKS"]
+    L2 --> L3["LAYER 3: CRAFT AND POLISH ENGINE"]
+    L3 --> VLoop["VISUAL VERIFIER AND EYE"]
+    VLoop --> Gate{"STRICT AUDIT GATEKEEPER"}
 
-    subgraph L2["LAYER 2: PATTERNS, STACKS AND SYSTEMS"]
-        SearchEngine["BM25 Search Engine<br/>67 Styles, 96 Palettes, 13 Stacks"]
-        CleanArch["Architecture and Standards<br/>Slot Composition, Figma to Code, Enterprise Tokens"]
-    end
-
-    subgraph L3["LAYER 3: CRAFT AND POLISH ENGINE"]
-        Motion["Motion Choreography<br/>Spring Physics, 35ms Stagger, Faster Exit"]
-        CopyWriting["UX Micro-Copy<br/>Banned Cliche Replacement, Error Recovery"]
-        StateMatrix["5-State Coverage<br/>Loading Skeleton Anti-CLS, Empty, Error, Truncate"]
-        Ergonomics["Spatial Ergonomics<br/>Mobile Thumb-Zone, Bottom-Sheet Morphing"]
-    end
-
-    subgraph VLoop["VISUAL VERIFIER AND EYE"]
-        Inspect["Real-Browser Inspection<br/>Viewport 375px Check, Overflow Detection"]
-    end
-
-    subgraph Gate["STRICT AUDIT GATEKEEPER"]
-        BlacklistCheck{"Blacklist Inspection<br/>taste-blacklist.csv"}
-        A11yVitalsCheck{"A11y and Vitals Guard<br/>Focus Trap, Zero-CLS, Compositor Motion"}
-    end
-
-    Step1 --> L1
-    L1 --> L2
-    L2 --> L3
-    L3 --> VLoop
-    VLoop --> Gate
-
-    BlacklistCheck -->|Ada Slop| Refactor["Auto-Refactor and Polish"]
+    Gate -->|Ada Slop| Refactor["Auto-Refactor and Polish"]
     Refactor --> L3
-    BlacklistCheck -->|Clean| A11yVitalsCheck
-    A11yVitalsCheck -->|Passes 100%| FinalOutput["DELIVER PRODUCTION CODE<br/>Pixel-Perfect, Accessible, High-Craft"]
+    Gate -->|Passes 100%| FinalOutput["DELIVER PRODUCTION CODE"]
+```
+
+```text
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                       DETAIL ALUR PROSES ARSITEKTUR                         │
+└─────────────────────────────────────────────────────────────────────────────┘
+  [USER REQUEST]
+        │
+        ▼
+  [0. STACK & DIALS SELECTION] ─────────► Framework: Next.js / Vue / Svelte
+        │                                Dials: Radius, Density, Depth, Motion
+        ▼
+  [1. MULTI-DIRECTION EXPLORATION] ─────► [1] Radical Minimalist
+        │                                [2] Structured Telemetry
+        │                                [3] Expressive Humanist
+        ▼
+  [LAYER 1: FOUNDATIONS] ───────────────► 4px Rhythm, Modular Scale, HSL Colors
+        │                                Token Lock: design-system/MASTER.md
+        ▼
+  [LAYER 2: PATTERNS & SYSTEMS] ────────► 67 Styles, 96 Palettes, 13 Stacks
+        │                                Slot Pattern, Figma-to-Code Mapping
+        ▼
+  [LAYER 3: CRAFT & POLISH] ────────────► Spring Physics (mass, stiffness, damping)
+        │                                5-State Architecture (Anti-CLS Skeleton)
+        │                                Micro-Copywriting & Action Verbs
+        │                                Mobile Thumb-Zone (Bottom 40%)
+        ▼
+  [VISUAL VERIFIER] ────────────────────► Headless Browser & Viewport 375px Check
+        │                                Overflow & Hitbox Inspection
+        ▼
+  [STRICT GATEKEEPER] ──────────────────► taste-blacklist.csv (Anti-Slop Check)
+        │                                WCAG 2.2 AAA A11y (Focus Trap Check)
+        │                                Core Web Vitals (Zero-CLS & INP Guard)
+        │
+   [Passes 100%]
+        ▼
+  [DELIVER PRODUCTION CODE]
 ```
 
 ---

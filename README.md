@@ -341,7 +341,8 @@ frontend-design-mastery/
 │   ├── colors.csv (96 palettes)     # Palet warna terkurasi
 │   ├── typography.csv (57 pairings) # Pasangan font teruji
 │   └── stacks/                      # 13 adapter spesifik framework (Next, Vue, Tailwind, dll.)
-├── references/                      # 17 Modul panduan spesialis tingkat lanjut
+├── references/                      # 18 Modul spesialisasi & open-source archetypes
+│   ├── open-source-archetypes.md    # Katalog 26 tipe sistem & website (78 repositori OSS terverifikasi)
 │   ├── tweakable-dials.md           # Slider rasa (Radius, Density, Depth, Tempo)
 │   ├── design-directions.md         # Framework eksplorasi 3 arah visual side-by-side
 │   ├── visual-verifier.md           # Protokol inspeksi headless browser di mobile 375px
@@ -357,13 +358,46 @@ frontend-design-mastery/
 │   ├── search.py                    # Mesin pencari BM25 untuk rekomendasi style & stack
 │   ├── design_system.py             # Generator & persistence engine (MASTER.md)
 │   └── taste_audit.py               # Enforcer audit blacklist & craft heuristics
-└── examples/
-    └── dashboard.tsx                # Contoh riil React + Tailwind High-Craft Telemetry
+└── examples/                        # Komponen & layout siap pakai (Production-Ready)
+    ├── craft/                       # Micro-Interactions signature (The Big 6)
+    │   ├── border-beam.tsx          # Conic perimeter beam (60fps, zero-CLS)
+    │   ├── spotlight-card.tsx       # Pointer tracking radial glow card
+    │   ├── shimmer-button.tsx       # Tactile CTA button dengan rotating shimmer
+    │   ├── animated-beam.tsx        # Dynamic curved SVG integration beam
+    │   ├── text-morph.tsx           # LayoutId character morphing & tabular figures
+    │   └── floating-dock.tsx        # Spring pointer magnification toolbar
+    ├── websites/                    # Template website modern
+    │   ├── ai-chatbot.tsx           # Studio AI Chat Workspace
+    │   └── wiki-documentation.tsx   # MDX Documentation layout
+    ├── systems/                     # Arsitektur sistem berdensitas tinggi
+    │   ├── payment-billing.tsx      # Invoicing & recurring billing ledger
+    │   ├── kanban-board.tsx         # Drag-and-drop task kanban board
+    │   └── iot-telemetry.tsx        # Industrial sensor & edge device monitoring
+    └── dashboard.tsx                # Financial telemetry telemetry dashboard
 ```
 
 ---
 
-## ❓ 10. FAQ
+## 🎨 10. Katalog Contoh & Craft Primitives
+
+Skill ini dilengkapi dengan komponen *production-grade* yang telah dibersihkan dari "AI-Slop" (tanpa neon murahan, aman dari layout shift, dan patuh `prefers-reduced-motion`):
+
+### A. The Big 6 Craft Primitives (`examples/craft/`)
+1. **[`border-beam.tsx`](examples/craft/border-beam.tsx)** — Animasi perimeter bercahaya di sepanjang batas container menggunakan conic mask hardware-accelerated.
+2. **[`spotlight-card.tsx`](examples/craft/spotlight-card.tsx)** — Kartu bento interaktif dengan radial spotlight yang mengikuti kursor mouse tanpa membebani thread utama.
+3. **[`shimmer-button.tsx`](examples/craft/shimmer-button.tsx)** — Tombol CTA taktil dengan shimmer keliling mewah dan skala respon tekan `0.98`.
+4. **[`animated-beam.tsx`](examples/craft/animated-beam.tsx)** — Garis kurva SVG dinamis yang secara otomatis menghitung koordinat antar elemen (ideal untuk visualisasi integrasi/topologi).
+5. **[`text-morph.tsx`](examples/craft/text-morph.tsx)** — Transisi perpindahan huruf dan angka per karakter dengan fisika pegas nyata dan angka tabular (`tabular-nums`).
+6. **[`floating-dock.tsx`](examples/craft/floating-dock.tsx)** — Toolbar mengambang dengan magnifikasi kursor berkelanjutan ala macOS dan fallback menu ergonomis pada mobile.
+
+### B. Full Page & System Archetypes
+* **Websites:** [`ai-chatbot.tsx`](examples/websites/ai-chatbot.tsx), [`wiki-documentation.tsx`](examples/websites/wiki-documentation.tsx)
+* **Systems:** [`payment-billing.tsx`](examples/systems/payment-billing.tsx), [`kanban-board.tsx`](examples/systems/kanban-board.tsx), [`iot-telemetry.tsx`](examples/systems/iot-telemetry.tsx), [`dashboard.tsx`](examples/dashboard.tsx)
+* **Katalog Riset 78 OSS:** Baca panduan lengkap referensi 26 tipe sistem dan website di [`references/open-source-archetypes.md`](references/open-source-archetypes.md).
+
+---
+
+## ❓ 11. FAQ
 
 <details>
 <summary><strong>Apakah skill ini hanya bisa digunakan untuk Tailwind CSS?</strong></summary>
@@ -391,7 +425,7 @@ Prompt biasa hanya memberi instruksi teks pendek. Skill ini adalah sistem terstr
 
 ---
 
-## 🤝 11. Kontribusi, Lisensi & Kontak
+## 🤝 12. Kontribusi, Lisensi & Kontak
 
 * **Lisensi:** Proyek ini dilisensikan di bawah [MIT License](LICENSE). Bebas digunakan, dimodifikasi, dan didistribusikan untuk proyek personal maupun komersial.
 * **Kontribusi:** Pull Request dan kontribusi aturan baru pada `taste-blacklist.csv` atau modul referensi sangat diapresiasi! Silakan fork dan buat branch baru.

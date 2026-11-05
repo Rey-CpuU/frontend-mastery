@@ -26,28 +26,28 @@
 
 ---
 
-## 📸 2. Demo & Preview: Multi-Direction Visual Ideation
+## 📸 2. Demo & Preview
 
-Skill ini bukan template untuk satu genre saja. Ia dirancang untuk merancang antarmuka apa pun—mulai dari Landing Page SaaS, E-Commerce, Portofolio Editorial, hingga Dashboard Aplikasi—dengan standar estetika tinggi tanpa terjebak *AI-slop*:
+```text
+$ .\fdm explore "Autonomous Cloud Gateway"
 
-<p align="center">
-  <img src="assets/preview.png" alt="Frontend Design Mastery Multi-Direction Preview" width="100%" />
-</p>
+[⚡] Analyzing Design Brief & Requirements...
+[✓] Target Domain     : High-Density Cloud Infrastructure
+[✓] Spacing Rhythm    : 4px / 8px Strict Modular Grid
+[✓] Framework Adapter : Next.js 14 App Router + Tailwind CSS
 
-*Contoh riil hasil render dua arah estetika kontras (*Direction A: Minimalist SaaS* vs *Direction B: Tactical Component Craft*) yang di-generate dengan palet semantik, ritme spasi 4px, dan parameter spring physics nyata.*
+Synthesizing 3 Contrasting Aesthetic Directions:
+  ├── [1] Radical Minimalist   -> High-whitespace, Instrument Serif, Ink Black (#0B0F17)
+  ├── [2] Structured Telemetry -> 1px Hairline Borders, Tabular Numbers, Emerald Status (#10B981)
+  └── [3] Expressive Humanist  -> Soft Curves (rounded-2xl), Ambient Violet Glow, Fluid Motion
 
-<details>
-<summary><strong>👉 Klik di sini untuk melihat perbandingan Before vs After (AI Biasa vs Frontend Mastery)</strong></summary>
-
-| Komponen | Output AI Biasa (AI-Slop) ❌ | Output Frontend Mastery ✅ |
-| :--- | :--- | :--- |
-| **Tombol CTA** | `bg-gradient-to-r from-purple-500 to-blue-500 rounded-full shadow-2xl` | `bg-emerald-500 hover:bg-emerald-400 active:scale-[0.98] rounded-lg shadow-sm font-medium` |
-| **Teks Tombol** | *"Get Started"* atau *"Click Here"* (Klise & Generik) | *"Start building free"* atau *"Deploy to production"* (Action Verbs) |
-| **Border & Card** | `shadow-2xl border-none` (Semua card melayang aneh) | `border border-white/[0.08] hover:border-white/[0.18]` (Elegan & Hening) |
-| **Tipografi** | Inter/Poppins tanpa optical tuning | Pasangan terkurasi (misal: Satoshi / Outfit) + negative tracking `-0.025em` |
-| **Motion** | `transition: all 0.2s ease` (Kaku & robotik) | Spring Physics `{ mass: 0.8, stiffness: 280, damping: 24 }` |
-
-</details>
+[?] Select aesthetic direction [1-3]: 2
+[✓] Persisting Design System -> design-system/cloud-gateway/MASTER.md
+[✓] Injecting Spring Physics : { mass: 0.8, stiffness: 280, damping: 24 }
+[✓] Running Strict Audit     : 0 slop defects | WCAG 2.2 AAA Validated | Zero CLS Guard
+[🚀] DELIVERED: Production-grade component generated in 1.4s!
+```
+*Simulasi interaksi terminal di atas menunjukkan bagaimana `frontend-design-mastery` memandu proses desain: mulai dari ekstraksi brief, penentuan arah visual, penguncian token, hingga audit kualitas otomatis.*
 
 ---
 

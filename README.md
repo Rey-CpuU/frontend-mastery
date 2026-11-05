@@ -1,28 +1,34 @@
-```text
- ███████╗██████╗  ██████╗ ███╗   ██╗████████╗███████╗███╗   ██╗██████╗ 
- ██╔════╝██╔══██╗██╔═══██╗████╗  ██║╚══██╔══╝██╔════╝████╗  ██║██╔══██╗
- █████╗  ██████╔╝██║   ██║██╔██╗ ██║   ██║   █████╗  ██╔██╗ ██║██║  ██║
- ██╔══╝  ██╔══██╗██║   ██║██║╚██╗██║   ██║   ██╔══╝  ██║╚██╗██║██║  ██║
- ██║     ██║  ██║╚██████╔╝██║ ╚████║   ██║   ███████╗██║ ╚████║██████╔╝
- ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚═╝  ╚═══╝╚═════╝ 
- ███╗   ███╗ █████╗ ███████╗████████╗███████╗██████╗ ██╗   ██╗         
- ████╗ ████║██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗╚██╗ ██╔╝         
- ██╔████╔██║███████║███████╗   ██║   █████╗  ██████╔╝ ╚████╔╝          
- ██║╚██╔╝██║██╔══██║╚════██║   ██║   ██╔══╝  ██╔══██╗  ╚██╔╝           
- ██║ ╚═╝ ██║██║  ██║███████║   ██║   ███████╗██║  ██║   ██║            
- ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝            
-```
+<div align="center">
+
+<pre>
+███████╗██████╗  ██████╗ ███╗   ██╗████████╗███████╗███╗   ██╗██████╗ 
+██╔════╝██╔══██╗██╔═══██╗████╗  ██║╚══██╔══╝██╔════╝████╗  ██║██╔══██╗
+█████╗  ██████╔╝██║   ██║██╔██╗ ██║   ██║   █████╗  ██╔██╗ ██║██║  ██║
+██╔══╝  ██╔══██╗██║   ██║██║╚██╗██║   ██║   ██╔══╝  ██║╚██╗██║██║  ██║
+██║     ██║  ██║╚██████╔╝██║ ╚████║   ██║   ███████╗██║ ╚████║██████╔╝
+╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚═╝  ╚═══╝╚═════╝ 
+███╗   ███╗ █████╗ ███████╗████████╗███████╗██████╗ ██╗   ██╗         
+████╗ ████║██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗╚██╗ ██╔╝         
+██╔████╔██║███████║███████╗   ██║   █████╗  ██████╔╝ ╚████╔╝          
+██║╚██╔╝██║██╔══██║╚════██║   ██║   ██╔══╝  ██╔══██╗  ╚██╔╝           
+██║ ╚═╝ ██║██║  ██║███████║   ██║   ███████╗██║  ██║   ██║            
+╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝            
+</pre>
 
 # frontend-design-mastery
 
 > **The Definitive Frontend Design Engineering System & Anti-AI-Slop Enforcer.**  
 > Mengubah AI Coding Assistant menjadi Design Engineer berstandar studio kelas dunia dengan arsitektur 3-layer, verifikasi visual nyata, dan kontrol rasa deterministik.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
-[![Platform: Antigravity](https://img.shields.io/badge/Platform-Antigravity%20%2F%20Gemini-8E75FF?style=flat-square)](https://github.com/Rey-CpuU/frontend-mastery)
-[![Quality: Anti--AI--Slop](https://img.shields.io/badge/Craft-Anti--AI--Slop%20Certified-10B981?style=flat-square)](#-7-topologi-detail-box-ascii-architecture)
-[![A11y: WCAG 2.2 AAA](https://img.shields.io/badge/A11y-WCAG%202.2%20AAA-F59E0B?style=flat-square)](#9-audit-aksesibilitas-deterministik-wcag-22-aaa)
-[![Web Vitals: Zero--CLS](https://img.shields.io/badge/Web%20Vitals-Zero--CLS%20Guard-06B6D4?style=flat-square)](#10-audit-core-web-vitals--zero-cls)
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License: MIT"></a>
+  <a href="https://github.com/Rey-CpuU/frontend-mastery"><img src="https://img.shields.io/badge/Platform-Antigravity%20%2F%20Gemini-8E75FF?style=flat-square" alt="Platform"></a>
+  <a href="#-7-topologi-detail-box-ascii-architecture"><img src="https://img.shields.io/badge/Craft-Anti--AI--Slop%20Certified-10B981?style=flat-square" alt="Quality"></a>
+  <a href="#9-audit-aksesibilitas-deterministik-wcag-22-aaa"><img src="https://img.shields.io/badge/A11y-WCAG%202.2%20AAA-F59E0B?style=flat-square" alt="A11y"></a>
+  <a href="#10-audit-core-web-vitals--zero-cls"><img src="https://img.shields.io/badge/Web%20Vitals-Zero--CLS%20Guard-06B6D4?style=flat-square" alt="Web Vitals"></a>
+</p>
+
+</div>
 
 ---
 

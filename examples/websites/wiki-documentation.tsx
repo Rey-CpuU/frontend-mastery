@@ -4,9 +4,6 @@ import {
   Search, 
   ChevronRight, 
   ArrowRight, 
-  ExternalLink,
-  Code2,
-  Terminal,
   FileText
 } from 'lucide-react';
 
@@ -25,8 +22,8 @@ export function WikiDocumentation() {
 
   return (
     <div className="min-h-screen bg-[#0B0F17] text-slate-200 font-sans flex">
-      {/* Sticky Left Sidebar */}
-      <aside className="w-64 border-r border-white/[0.08] bg-[#0E131F]/40 p-6 flex flex-col justify-between shrink-0 h-screen sticky top-0">
+      {/* Sticky Left Sidebar - responsive */}
+      <aside className="hidden md:flex w-64 border-r border-white/[0.08] bg-[#0E131F]/40 p-6 flex-col justify-between shrink-0 h-screen sticky top-0">
         <div>
           <div className="flex items-center gap-2 mb-6">
             <BookOpen className="w-5 h-5 text-indigo-400" />
@@ -37,6 +34,7 @@ export function WikiDocumentation() {
             <Search className="w-3.5 h-3.5 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2" />
             <input 
               type="text" 
+              aria-label="Search documentation"
               placeholder="Search guides... (Ctrl+K)"
               className="w-full pl-8 pr-3 py-1.5 rounded-lg text-xs bg-black/20 border border-white/[0.08] text-slate-200 placeholder:text-slate-500 focus:outline-none focus:border-indigo-500/50 transition-colors"
             />

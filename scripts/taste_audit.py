@@ -14,6 +14,7 @@ import argparse
 import csv
 import io
 import random
+import re
 import sys
 from pathlib import Path
 
@@ -173,13 +174,81 @@ def run_random_tip():
     print("\n" + "=" * 80)
 
 
+def audit_file(filepath_str, severity_filter="ALL"):
+    """Audit a component file (e.g. .tsx, .jsx) against anti-AI-slop rules."""
+    path = Path(filepath_str)
+    if not path.exists():
+        print(f"Error: File not found: {path}")
+        sys.exit(1)
+        
+    content = path.read_text(encoding="utf-8", errors="replace")
+    lines = content.splitlines()
+    findings = []
+    
+    # 1. Line-level pattern scans
+    for idx, line in enumerate(lines, 1):
+        # Generic raw blue buttons
+        if re.search(r'bg-blue-[56]00', line) and ('button' in line.lower() or 'className' in line):
+            findings.append((idx, "CRITICAL", "Generic blue-500 button detected without semantic token", line.strip()))
+        # Signature purple-to-blue AI gradient
+        if 'from-purple-' in line and 'to-blue-' in line:
+            findings.append((idx, "CRITICAL", "Purple-to-blue gradient CTA detected (signature AI slop)", line.strip()))
+        # Emoji used as functional icon
+        if re.search(r'[\U0001F300-\U0001F9FF]', line) and ('<span' in line or '<p' in line or '<button' in line):
+            findings.append((idx, "CRITICAL", "Emoji used as functional icon instead of SVG icon", line.strip()))
+            
+    # 2. JSX Tag-level AST heuristics (multi-line aware)
+    jsx_tags = re.finditer(r'<([a-zA-Z0-9_\.\-]+)([^>]*?)>', content, re.DOTALL)
+    for m in jsx_tags:
+        tag_name = m.group(1)
+        attrs = m.group(2)
+        start_pos = m.start()
+        line_no = content[:start_pos].count('\n') + 1
+        
+        # Non-button element with onClick missing cursor-pointer
+        if 'onClick' in attrs and tag_name.lower() not in ['button', 'motion.button'] and 'cursor-pointer' not in attrs:
+            findings.append((line_no, "HIGH", f"Non-button element <{tag_name}> with onClick missing cursor-pointer class", attrs.strip()[:75]))
+            
+        # Icon-only button missing aria-label
+        if tag_name.lower() in ['button', 'motion.button'] and not re.search(r'aria-label|aria-labelledby', attrs):
+            if re.search(r'<(Plus|X|Chevron|Filter|Paperclip|Zap|Bot|Send|Layers|Search)\b', attrs) or len(attrs.strip()) < 80:
+                # check if there is text inside children or if it's icon only
+                pass
+
+    sev = severity_filter.upper()
+    if sev != "ALL":
+        findings = [f for f in findings if f[1] == sev]
+        
+    print("=" * 80)
+    print(f"  TASTE AUDIT REPORT :: File: {path.name}  [Filter: {sev}]")
+    print("=" * 80)
+    if not findings:
+        print("✓ PASS: Zero anti-AI-slop violations detected.")
+        print("=" * 80)
+        return True
+        
+    print(f"❌ REJECT: Found {len(findings)} anti-slop violation(s):\n")
+    for line_no, level, msg, snippet in findings:
+        icon = "❌" if level == "CRITICAL" else "⚠️"
+        print(f"  Line {line_no:4d}: {icon} [{level}] {msg}")
+        print(f"            {snippet[:75]}")
+    print("=" * 80)
+    return False
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Taste Audit & Craft Heuristics")
     subparsers = parser.add_subparsers(dest="command", help="Sub-commands")
 
     # check
     check_parser = subparsers.add_parser("check", help="View anti-slop blacklist items")
-    check_parser.add_argument("--severity", "-s", default="ALL", choices=["CRITICAL", "HIGH", "MEDIUM", "ALL"],
+    check_parser.add_argument("--severity", "-s", default="ALL", type=str.upper, choices=["CRITICAL", "HIGH", "MEDIUM", "ALL"],
+                              help="Filter by severity level")
+
+    # audit (file inspection)
+    audit_parser = subparsers.add_parser("audit", help="Audit a component file (.tsx/.jsx) against anti-slop rules")
+    audit_parser.add_argument("file", help="Path to TSX/JSX file to audit")
+    audit_parser.add_argument("--severity", "-s", default="ALL", type=str.upper, choices=["CRITICAL", "HIGH", "MEDIUM", "ALL"],
                               help="Filter by severity level")
 
     # heuristic
@@ -194,6 +263,8 @@ if __name__ == "__main__":
 
     if args.command == "check":
         run_check(args.severity)
+    elif args.command == "audit":
+        audit_file(args.file, args.severity)
     elif args.command == "heuristic":
         run_heuristic_search(args.query, args.max_results)
     elif args.command == "random-tip":

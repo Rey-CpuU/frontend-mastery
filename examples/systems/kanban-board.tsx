@@ -1,14 +1,8 @@
 import React, { useState } from 'react';
 import { 
   Plus, 
-  MoreHorizontal, 
-  Clock, 
-  CheckCircle2, 
-  AlertCircle, 
   Filter, 
-  SlidersHorizontal,
-  Layers,
-  ArrowRight
+  Layers
 } from 'lucide-react';
 
 /**
@@ -78,10 +72,10 @@ export function ProjectKanbanBoard() {
         </div>
 
         <div className="flex items-center gap-2">
-          <button className="px-3 py-1.5 rounded-lg text-xs font-medium bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] text-slate-300 transition-colors flex items-center gap-1.5 cursor-pointer">
+          <button type="button" className="px-3 py-1.5 rounded-lg text-xs font-medium bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] text-slate-300 transition-colors flex items-center gap-1.5 cursor-pointer">
             <Filter className="w-3.5 h-3.5" /> Filter Views
           </button>
-          <button className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 hover:bg-emerald-500 active:scale-[0.98] text-white transition-all flex items-center gap-1 cursor-pointer shadow-[0_0_15px_rgba(16,185,129,0.2)]">
+          <button type="button" className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 hover:bg-emerald-500 active:scale-[0.98] text-white transition-all flex items-center gap-1 cursor-pointer shadow-[0_0_15px_rgba(16,185,129,0.2)]">
             <Plus className="w-3.5 h-3.5" /> Create Issue
           </button>
         </div>
@@ -99,7 +93,7 @@ export function ProjectKanbanBoard() {
                   {col.count}
                 </span>
               </div>
-              <button className="text-slate-500 hover:text-slate-300 p-1">
+              <button type="button" aria-label={`Add task to ${col.name}`} className="text-slate-500 hover:text-slate-300 p-1">
                 <Plus className="w-3.5 h-3.5" />
               </button>
             </div>
@@ -113,7 +107,7 @@ export function ProjectKanbanBoard() {
                 >
                   <div className="flex items-center justify-between text-[11px] font-mono text-slate-500 mb-2">
                     <span>{task.id}</span>
-                    <span className={`px-2 py-0.2 rounded text-[10px] font-sans ${
+                    <span className={`px-2 py-0.5 rounded text-[10px] font-sans ${
                       task.priority === 'Urgent' 
                         ? 'text-rose-400 bg-rose-500/10 border border-rose-500/20' 
                         : 'text-amber-400 bg-amber-500/10 border border-amber-500/20'

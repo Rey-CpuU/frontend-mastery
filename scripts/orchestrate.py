@@ -31,9 +31,12 @@ BASE_DIR = Path(__file__).parent.parent
 SCRIPTS_DIR = BASE_DIR / "scripts"
 SKILLS_DIR = BASE_DIR.parent
 
-def run_dials():
+def run_dials(query=None):
     print("=" * 80)
-    print("  FRONTEND DESIGN MASTERY :: AESTHETIC DIALS & CONTROLS")
+    if query:
+        print(f"  FRONTEND DESIGN MASTERY :: AESTHETIC CONTROLS FOR: \"{query}\"")
+    else:
+        print("  FRONTEND DESIGN MASTERY :: AESTHETIC DIALS & CONTROLS")
     print("=" * 80)
     print("\nCalibrate the visual vibe before generating code:\n")
     print("  1. CORNER RADIUS  : [1] Sharp (0-2px)   ── [2] Crisp (4-8px)    ── [3] Soft (12-20px)")
@@ -137,7 +140,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Master Frontend Design Orchestrator")
     subparsers = parser.add_subparsers(dest="command", help="Orchestration command")
 
-    subparsers.add_parser("dials", help="Show interactive aesthetic dials")
+    dials_parser = subparsers.add_parser("dials", help="Show interactive aesthetic dials")
+    dials_parser.add_argument("query", nargs="?", default=None, help="Optional context/domain to calibrate dials for")
 
     explore_parser = subparsers.add_parser("explore", help="Explore 3 contrasting visual directions")
     explore_parser.add_argument("query", help="Design query or prompt")
@@ -149,7 +153,7 @@ if __name__ == "__main__":
     persist_parser.add_argument("--page", default=None, help="Page-specific override")
 
     audit_parser = subparsers.add_parser("audit", help="Run anti-slop blacklist audit")
-    audit_parser.add_argument("--severity", "-s", default="ALL", choices=["ALL", "CRITICAL", "HIGH", "MEDIUM"])
+    audit_parser.add_argument("--severity", "-s", default="ALL", type=str.upper, choices=["ALL", "CRITICAL", "HIGH", "MEDIUM"])
 
     subparsers.add_parser("a11y", help="Run deterministic WCAG A11y verification")
     subparsers.add_parser("vitals", help="Run Core Web Vitals performance verification")
@@ -157,7 +161,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.command == "dials":
-        run_dials()
+        run_dials(args.query)
     elif args.command == "explore":
         run_explore(args.query, args.project)
     elif args.command == "persist":

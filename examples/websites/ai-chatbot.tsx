@@ -2,11 +2,9 @@ import React, { useState } from 'react';
 import { 
   Bot, 
   Send, 
-  User, 
   Sparkles, 
   Copy, 
   Check, 
-  RotateCcw, 
   Terminal, 
   ChevronDown,
   Paperclip,
@@ -44,7 +42,7 @@ export function AIStudioChatbot() {
     }
   ]);
   const [input, setInput] = useState('');
-  const [copied, setCopied] = useState(false)
+  const [copied, setCopied] = useState(false);
 
   const handleCopy = (code: string) => {
     navigator.clipboard.writeText(code);
@@ -52,10 +50,24 @@ export function AIStudioChatbot() {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const handleSend = () => {
+    if (!input.trim()) return;
+    setMessages((prev) => [
+      ...prev,
+      {
+        id: `m${Date.now()}`,
+        sender: 'user',
+        content: input,
+        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      },
+    ]);
+    setInput('');
+  };
+
   return (
     <div className="flex h-screen bg-[#0B0F17] text-slate-200 font-sans selection:bg-indigo-500/30 selection:text-indigo-200">
-      {/* Sidebar */}
-      <aside className="w-64 border-r border-white/[0.08] bg-[#0E131F] flex flex-col justify-between p-4">
+      {/* Sidebar - responsive */}
+      <aside className="hidden md:flex w-64 border-r border-white/[0.08] bg-[#0E131F] flex-col justify-between p-4">
         <div>
           <div className="flex items-center gap-2 mb-6 px-2">
             <div className="h-7 w-7 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
@@ -149,19 +161,27 @@ export function AIStudioChatbot() {
         {/* Input Bar with Thumb Zone & Action Verb */}
         <div className="p-6 border-t border-white/[0.08] bg-[#0B0F17]">
           <div className="max-w-4xl mx-auto relative rounded-xl border border-white/[0.1] bg-[#121824] focus-within:border-indigo-500/50 transition-colors p-2">
+            <label htmlFor="prompt-input" className="sr-only">Prompt input</label>
             <textarea
+              id="prompt-input"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask anything or request design adjustments..."
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                  e.preventDefault();
+                  handleSend();
+                }
+              }}
+              placeholder="Ask anything or request design adjustments... (Press Enter to execute)"
               rows={2}
               className="w-full bg-transparent text-sm text-slate-200 placeholder:text-slate-500 focus:outline-none resize-none px-3 pt-1"
             />
             <div className="flex items-center justify-between px-2 pt-2 border-t border-white/[0.04]">
               <div className="flex items-center gap-1.5 text-slate-400">
-                <button type="button" className="p-1.5 rounded-lg hover:bg-white/[0.06] hover:text-slate-200 transition-colors">
+                <button type="button" aria-label="Attach file" className="p-1.5 rounded-lg hover:bg-white/[0.06] hover:text-slate-200 transition-colors">
                   <Paperclip className="w-4 h-4" />
                 </button>
-                <button type="button" className="p-1.5 rounded-lg hover:bg-white/[0.06] hover:text-slate-200 transition-colors">
+                <button type="button" aria-label="Enhance prompt with AI" className="p-1.5 rounded-lg hover:bg-white/[0.06] hover:text-slate-200 transition-colors">
                   <Zap className="w-4 h-4" />
                 </button>
               </div>
@@ -169,6 +189,7 @@ export function AIStudioChatbot() {
               {/* Action Button: Non-generic copy */}
               <button
                 type="button"
+                onClick={handleSend}
                 className="px-4 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 active:scale-[0.98] text-white text-xs font-medium transition-all flex items-center gap-1.5 cursor-pointer shadow-[0_0_15px_rgba(99,102,241,0.25)]"
               >
                 <span>Execute Prompt</span>

@@ -119,6 +119,7 @@ function DockIcon({
 
       <motion.button
         type="button"
+        aria-label={title}
         onClick={onClick}
         style={{ width, height }}
         className="flex items-center justify-center rounded-xl border border-zinc-700/60 bg-zinc-800/90 text-zinc-300 transition-colors hover:bg-zinc-700 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400"
@@ -155,13 +156,14 @@ function FloatingDockMobile({
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: idx * 0.04 }}
                 type="button"
+                aria-label={item.title}
                 onClick={() => {
                   item.onClick?.();
                   setOpen(false);
                 }}
-                className="flex h-10 w-10 items-center justify-center rounded-lg border border-zinc-700/60 bg-zinc-800 text-zinc-300 active:scale-95"
+                className="flex h-11 w-11 items-center justify-center rounded-lg border border-zinc-700/60 bg-zinc-800 text-zinc-300 active:scale-95"
               >
-                <div className="h-4 w-4">{item.icon}</div>
+                <div className="h-5 w-5">{item.icon}</div>
               </motion.button>
             ))}
           </motion.div>
@@ -170,6 +172,8 @@ function FloatingDockMobile({
 
       <button
         type="button"
+        aria-label="Toggle navigation dock"
+        aria-expanded={open}
         onClick={() => setOpen(!open)}
         className="flex h-12 w-12 items-center justify-center rounded-2xl border border-zinc-700/80 bg-zinc-800 text-zinc-200 shadow-xl active:scale-95"
       >

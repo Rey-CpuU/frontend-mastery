@@ -1,0 +1,21 @@
+No,Category,Guideline,Description,Do,Don't,Code Good,Code Bad,Severity,Docs URL
+1,Components,Use functional components,Hooks-based components are standard,Functional components with hooks,Class components,const App = () => { },class App extends Component,Medium,https://reactnative.dev/docs/intro-react
+2,Components,Keep components small,Single responsibility principle,Split into smaller components,Large monolithic components,<Header /><Content /><Footer />,500+ line component,Medium,
+3,Components,Use TypeScript,Type safety for props and state,TypeScript for new projects,JavaScript without types,const Button: FC<Props> = () => { },const Button = (props) => { },Medium,
+4,Components,Colocate component files,Keep related files together,Component folder with styles,Flat structure,components/Button/index.tsx styles.ts,components/Button.tsx styles/button.ts,Low,
+5,Styling,Use StyleSheet.create,Optimized style objects,StyleSheet for all styles,Inline style objects,StyleSheet.create({ container: {} }),style={{ margin: 10 }},High,https://reactnative.dev/docs/stylesheet
+6,Styling,Avoid inline styles,Prevent object recreation,Styles in StyleSheet,Inline style objects in render,style={styles.container},"style={{ margin: 10, padding: 5 }}",Medium,
+7,Styling,Use flexbox for layout,React Native uses flexbox,flexDirection alignItems justifyContent,Absolute positioning everywhere,flexDirection: 'row',position: 'absolute' everywhere,Medium,https://reactnative.dev/docs/flexbox
+8,Styling,Handle platform differences,Platform-specific styles,Platform.select or .ios/.android files,Same styles for both platforms,"Platform.select({ ios: {}, android: {} })",Hardcoded iOS values,Medium,https://reactnative.dev/docs/platform-specific-code
+9,Styling,Use responsive dimensions,Scale for different screens,Dimensions or useWindowDimensions,Fixed pixel values,useWindowDimensions(),width: 375,Medium,
+10,Navigation,Use React Navigation,Standard navigation library,React Navigation for routing,Manual navigation management,createStackNavigator(),Custom navigation state,Medium,https://reactnavigation.org/
+11,Navigation,Type navigation params,Type-safe navigation,Typed navigation props,Untyped navigation,"navigation.navigate<RootStackParamList>('Home', { id })","navigation.navigate('Home', { id })",Medium,
+12,Navigation,Use deep linking,Support URL-based navigation,Configure linking prop,No deep link support,linking: { prefixes: [] },No linking configuration,Medium,https://reactnavigation.org/docs/deep-linking/
+13,Navigation,Handle back button,Android back button handling,useFocusEffect with BackHandler,Ignore back button,BackHandler.addEventListener,No back handler,High,
+14,State,Use useState for local state,Simple component state,useState for UI state,Class component state,"const [count, setCount] = useState(0)",this.state = { count: 0 },Medium,
+15,State,Use useReducer for complex state,Complex state logic,useReducer for related state,Multiple useState for related values,useReducer(reducer initialState),5+ useState calls,Medium,
+16,State,Use context sparingly,Context for global state,Context for theme auth locale,Context for frequently changing data,ThemeContext for app theme,Context for list item data,Medium,
+17,State,Consider Zustand or Redux,External state management,Zustand for simple Redux for complex,useState for global state,create((set) => ({ })),Prop drilling global state,Medium,
+18,Lists,Use FlatList for long lists,Virtualized list rendering,FlatList for 50+ items,ScrollView with map,<FlatList data={items} />,<ScrollView>{items.map()}</ScrollView>,High,https://reactnative.dev/docs/flatlist
+19,Lists,Provide keyExtractor,Unique keys for list items,keyExtractor with stable ID,Index as key,keyExtractor={(item) => item.id},"keyExtractor={(_, index) => index}",High,
+20,Lists,Optimize renderItem,Memoize list item components,React.memo for list items,Inline render function,renderItem={({ item }) => <MemoizedItem item={item} />},renderItem={({ item }) => <ComplexItem item={item} />},Medium,https://reactnative.dev/docs/flatlist#renderitem

@@ -1,0 +1,30 @@
+No,Category,Icon Name,Keywords,Library,Import Code,Usage,Best For,Style
+1,Navigation,menu,hamburger menu navigation toggle bars,Lucide,import { Menu } from 'lucide-react',<Menu />,Mobile navigation drawer toggle sidebar,Outline
+2,Navigation,arrow-left,back previous return navigate,Lucide,import { ArrowLeft } from 'lucide-react',<ArrowLeft />,Back button breadcrumb navigation,Outline
+3,Navigation,arrow-right,next forward continue navigate,Lucide,import { ArrowRight } from 'lucide-react',<ArrowRight />,Forward button next step CTA,Outline
+4,Navigation,chevron-down,dropdown expand accordion select,Lucide,import { ChevronDown } from 'lucide-react',<ChevronDown />,Dropdown toggle accordion header,Outline
+5,Navigation,chevron-up,collapse close accordion minimize,Lucide,import { ChevronUp } from 'lucide-react',<ChevronUp />,Accordion collapse minimize,Outline
+6,Navigation,home,homepage main dashboard start,Lucide,import { Home } from 'lucide-react',<Home />,Home navigation main page,Outline
+7,Navigation,x,close cancel dismiss remove exit,Lucide,import { X } from 'lucide-react',<X />,Modal close dismiss button,Outline
+8,Navigation,external-link,open new tab external link,Lucide,import { ExternalLink } from 'lucide-react',<ExternalLink />,External link indicator,Outline
+9,Action,plus,add create new insert,Lucide,import { Plus } from 'lucide-react',<Plus />,Add button create new item,Outline
+10,Action,minus,remove subtract decrease delete,Lucide,import { Minus } from 'lucide-react',<Minus />,Remove item quantity decrease,Outline
+11,Action,trash-2,delete remove discard bin,Lucide,import { Trash2 } from 'lucide-react',<Trash2 />,Delete action destructive,Outline
+12,Action,edit,pencil modify change update,Lucide,import { Edit } from 'lucide-react',<Edit />,Edit button modify content,Outline
+13,Action,save,disk store persist save,Lucide,import { Save } from 'lucide-react',<Save />,Save button persist changes,Outline
+14,Action,download,export save file download,Lucide,import { Download } from 'lucide-react',<Download />,Download file export,Outline
+15,Action,upload,import file attach upload,Lucide,import { Upload } from 'lucide-react',<Upload />,Upload file import,Outline
+16,Action,copy,duplicate clipboard paste,Lucide,import { Copy } from 'lucide-react',<Copy />,Copy to clipboard,Outline
+17,Action,share,social distribute send,Lucide,import { Share } from 'lucide-react',<Share />,Share button social,Outline
+18,Action,search,find lookup filter query,Lucide,import { Search } from 'lucide-react',<Search />,Search input bar,Outline
+19,Action,filter,sort refine narrow options,Lucide,import { Filter } from 'lucide-react',<Filter />,Filter dropdown sort,Outline
+20,Action,settings,gear cog preferences config,Lucide,import { Settings } from 'lucide-react',<Settings />,Settings page configuration,Outline
+21,Status,check,success done complete verified,Lucide,import { Check } from 'lucide-react',<Check />,Success state checkmark,Outline
+22,Status,check-circle,success verified approved complete,Lucide,import { CheckCircle } from 'lucide-react',<CheckCircle />,Success badge verified,Outline
+23,Status,x-circle,error failed cancel rejected,Lucide,import { XCircle } from 'lucide-react',<XCircle />,Error state failed,Outline
+24,Status,alert-triangle,warning caution attention danger,Lucide,import { AlertTriangle } from 'lucide-react',<AlertTriangle />,Warning message caution,Outline
+25,Status,alert-circle,info notice information help,Lucide,import { AlertCircle } from 'lucide-react',<AlertCircle />,Info notice alert,Outline
+26,Status,info,information help tooltip details,Lucide,import { Info } from 'lucide-react',<Info />,Information tooltip help,Outline
+27,Status,loader,loading spinner processing wait,Lucide,import { Loader } from 'lucide-react',<Loader className="animate-spin" />,Loading state spinner,Outline
+28,Status,clock,time schedule pending wait,Lucide,import { Clock } from 'lucide-react',<Clock />,Pending time schedule,Outline
+29,Communication,mail,email message inbox letter,Lucide,import { Mail } from 'lucide-react',<Mail />,Email contact inbox,Outline

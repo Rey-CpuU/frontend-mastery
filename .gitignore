@@ -1,0 +1,63 @@
+# Environment and Local Configs
+.env
+.env*.local
+*.env
+*.local
+
+# Secrets and Credentials
+*.pem
+*.key
+*.cert
+*.pfx
+secrets/
+credentials/
+tokens/
+*_token*
+
+# Python & Build Artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Node.js & Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# System & OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Logs & Temporary files
+*.log
+tmp/
+temp/

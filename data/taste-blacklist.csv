@@ -1,0 +1,56 @@
+Category,Item,Severity,Why_Bad,Do_Instead
+Color,Raw blue-500 buttons without semantic alias,CRITICAL,Tailwind default zero personality — screams unthemed template,Use semantic token --color-primary mapped to your brand
+Color,Purple-to-blue gradient on every CTA,CRITICAL,AI-slop signature circa 2023 — instantly signals generated UI,Solid brand color or subtle same-hue gradient (e.g. blue-600→blue-500)
+Color,Rainbow gradient text,HIGH,Illegible at body sizes and distracting — looks like a CodePen demo,Single color or subtle two-tone gradient on display headings only
+Color,bg-gray-900 text-white as dark mode,HIGH,No color system — flat and lifeless with zero depth,Layered surfaces with semantic depth tokens (surface-1/2/3)
+Color,Using red for non-error emphasis,MEDIUM,Confuses error signaling — users scan red as danger,Use accent color or font-weight for emphasis
+Color,Neon green accent (#00ff00) in production,HIGH,Harsh on eyes and poor contrast — reads as terminal/hacker aesthetic,Muted teal or emerald variant with 4.5:1 contrast ratio
+Color,Pure black (#000000) text on pure white (#ffffff),MEDIUM,Maximum contrast causes halation and eye strain on screens,Use near-black (gray-900 / #111827) on off-white (gray-50 / #f9fafb)
+Typography,Inter as default without reasoning,HIGH,Most overused AI-generated font — signals zero design thought,Research and choose font matching brand personality and use case
+Typography,Poppins for everything,HIGH,Geometric rounded = friendly but generic — every AI chatbot uses it,Choose based on product type and mood (e.g. Satoshi for modern SaaS)
+Typography,Comic Sans or novelty fonts in production,CRITICAL,Unprofessional and destroys credibility immediately,Use well-paired professional typefaces from Google Fonts or licensed foundries
+Typography,More than 3 font families on one page,HIGH,Visual chaos and slow loading — each family adds ~100KB,Maximum 2 families; use weight/style variation within them
+Typography,Heading size > 64px without responsive clamp,MEDIUM,Breaks on mobile — hero text overflows viewport,Use clamp() for fluid sizing: clamp(2rem 5vw 4rem)
+Typography,All-caps body text,HIGH,Destroys readability — harder to parse word shapes,Reserve uppercase for labels/badges/overlines max 2-3 words
+Typography,Justified text on the web,MEDIUM,Creates rivers of whitespace and hurts dyslexic readers,Left-align body text; use max-w-prose for line length
+Layout,Bento grid with all equal-sized cards,HIGH,No hierarchy — everything competes for attention equally,Vary card sizes; use featured card pattern (1 large + smaller)
+Layout,Rounded-full on ALL elements,HIGH,Looks toyish and unintentional — no visual system,Pick 2-3 radius values intentionally (sm for inputs / lg for cards / full for avatars only)
+Layout,Parallax on mobile,CRITICAL,Performance killer and UX disaster — janky scroll on touch devices,Disable parallax below 768px; use subtle translateY instead
+Layout,Auto-playing video without consent,CRITICAL,Accessibility violation and data waste — punishes mobile users,Poster image with prominent play button; respect prefers-reduced-motion
+Layout,Centered everything with no alignment anchor,MEDIUM,Floaty ungrounded layout — text blocks feel disconnected,Left-align body with centered hero only; use consistent grid alignment
+Layout,Full-width text paragraphs (no max-width),HIGH,Lines too long destroy readability — optimal is 45-75 characters,max-w-prose or max-w-2xl on text containers
+Component,Emoji as functional icons,CRITICAL,Renders differently per OS — not crisp and no consistent sizing,SVG icons from Heroicons/Lucide/Phosphor with consistent stroke width
+Component,Shadow-2xl on every card,HIGH,No elevation logic — everything floats at the same level,Semantic shadow scale: sm for resting / md for hover / lg for modals
+Component,Missing cursor:pointer on buttons and links,HIGH,Broken affordance signaling — users cannot tell elements are clickable,Always add cursor-pointer to interactive elements
+Component,No hover state transitions,HIGH,Feels broken and unresponsive — state changes are jarring,150-300ms ease-out transition on color/shadow/transform for hover
+Component,Linear easing on UI transitions,MEDIUM,Robotic unnatural motion — real objects do not move linearly,ease-out for entry; ease-in-out for morph; spring for playful UI
+Component,Instant state changes (no transition),HIGH,Jarring and feels buggy — users lose spatial context,Always animate state changes with minimum 100ms transition
+Component,Generic Get Started / Learn More CTAs,MEDIUM,No specificity and weak conversion — user cannot predict outcome,Action-specific copy: Start Building / See Pricing / Try Free for 14 Days
+Component,Stock photo hero with color overlay,MEDIUM,Generic template look — signals low-effort marketing site,Custom illustration / product screenshot / editorial photo
+Animation,Shimmer loading effect everywhere,MEDIUM,Overused skeleton pattern — distracting when applied to everything,Subtle opacity pulse at 1.5s ease-in-out; reserve shimmer for content-shaped areas
+Animation,Scale(0.8) on click feedback,MEDIUM,Too dramatic and unnatural — feels like a cartoon button,Scale(0.97) with spring physics or 100ms ease-out
+Animation,Bounce easing on everything,MEDIUM,Childish feel for serious products — appropriate only for playful brands,Spring or ease-out for professional feel; save bounce for celebrations
+Animation,Infinite animations without prefers-reduced-motion,CRITICAL,Accessibility violation — can trigger vestibular disorders,Always check @media (prefers-reduced-motion: reduce) and disable
+Structure,No loading/error/empty states designed,HIGH,Only happy path designed — breaks in production on first edge case,Design all 4 states: loading / empty / error / success
+Structure,Missing focus states on interactive elements,CRITICAL,Accessibility WCAG 2.1 violation — keyboard users cannot navigate,2px offset outline with brand color at 40% opacity: outline-2 outline-offset-2
+Structure,No responsive design below 768px,CRITICAL,Majority of traffic is mobile — unusable layout kills engagement,Mobile-first with breakpoints at 375px / 768px / 1024px / 1440px
+Structure,Text contrast below 4.5:1 ratio,CRITICAL,WCAG AA violation — text is unreadable for low-vision users,Always verify with contrast checker; use gray-600+ on white backgrounds
+Structure,Missing skip-to-content link,HIGH,Screen reader and keyboard users trapped in nav on every page,Add visually-hidden skip link that appears on focus as first focusable element
+Structure,No aria-labels on icon-only buttons,CRITICAL,Screen readers announce nothing — completely invisible interaction,Add aria-label describing the action: aria-label="Close dialog"
+Motion,transition: all 200ms ease everywhere,HIGH,Robotic and unnatural motion with zero inertia,Use custom cubic-bezier (--ease-spring-enter) or spring physics
+Motion,Linear easing for UI transitions,MEDIUM,Robotic and mechanical motion,Use ease-out for entry and ease-in for exits
+Copy,Using 'Get Started' as primary CTA,HIGH,Overused generic AI cliché with zero intent,Use specific verb: 'Start building free' or 'Claim workspace'
+Copy,Using 'Learn More' without context,MEDIUM,Lazy copy that doesn't explain the destination,Use specific: 'Read API specs' or 'Compare tiers'
+Copy,Vague 'An error occurred' messages,CRITICAL,Leaves user stranded with no recovery path,Explain what failed and provide immediate Retry or recovery action
+Copy,'Are you sure?' as modal title,HIGH,Generic confirmation that doesn't state consequence,State exact action: 'Revoke API key for this team member?'
+State,Designing only the happy path without loading/empty,CRITICAL,App breaks or flashes white screen in real production,Mandatory 5-state coverage: loading empty error partial ideal
+State,Raw unconstrained text without ellipsis or wrap,HIGH,Long names or emails break grid layout,Enforce truncate or min-w-0 flex constraints with tooltip
+State,Multiple independent flashing skeleton shimmers,MEDIUM,Chaotic visual noise during load,Synchronized gentle opacity pulse (1.5s ease-in-out)
+Ergonomics,Centered floating modal on mobile screens,HIGH,Virtual keyboard covers input fields and cuts off buttons,Morph into swipeable bottom-sheet on viewports below 768px
+Ergonomics,Touch targets smaller than 44x44px,CRITICAL,Causes missed taps and user frustration on mobile,Add padding to ensure at least 44x44px hit area
+Ergonomics,Missing inputmode and autocomplete attributes on mobile forms,MEDIUM,Forces user to manually switch keyboard modes,Set inputmode='email' or 'decimal' and autocomplete
+A11y,Modal dialogs without focus trap,CRITICAL,Keyboard users tab out of modal into background DOM,Enforce focus-trap with tab cycle and escape key dismiss
+A11y,Removing outline:none without visible focus replacement,CRITICAL,Destroys keyboard navigation visibility,Use outline-2 outline-offset-2 with brand color
+Performance,Animating width height top or left properties,HIGH,Triggers CPU layout recalculation causing frame drops and high INP,Animate only transform and opacity on GPU compositor thread
+Performance,Images without explicit aspect-ratio or dimensions,HIGH,Causes severe Cumulative Layout Shift (CLS) when image loads,Add aspect-ratio or explicit width and height
+Ideation,Defaulting to single generic SaaS template without exploration,MEDIUM,Results in monotonous AI slop across all projects,Explore 3 contrasting directions (Minimalist Structured Expressive)

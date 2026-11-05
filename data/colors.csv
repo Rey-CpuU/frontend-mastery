@@ -1,0 +1,38 @@
+No,Product Type,Primary (Hex),Secondary (Hex),CTA (Hex),Background (Hex),Text (Hex),Border (Hex),Notes
+1,SaaS (General),#2563EB,#3B82F6,#F97316,#F8FAFC,#1E293B,#E2E8F0,Trust blue + orange CTA contrast
+2,Micro SaaS,#6366F1,#818CF8,#10B981,#F5F3FF,#1E1B4B,#E0E7FF,Indigo primary + emerald CTA
+3,E-commerce,#059669,#10B981,#F97316,#ECFDF5,#064E3B,#A7F3D0,Success green + urgency orange
+4,E-commerce Luxury,#1C1917,#44403C,#CA8A04,#FAFAF9,#0C0A09,#D6D3D1,Premium dark + gold accent
+5,Service Landing Page,#0EA5E9,#38BDF8,#F97316,#F0F9FF,#0C4A6E,#BAE6FD,Sky blue trust + warm CTA
+6,B2B Service,#0F172A,#334155,#0369A1,#F8FAFC,#020617,#E2E8F0,Professional navy + blue CTA
+7,Financial Dashboard,#0F172A,#1E293B,#22C55E,#020617,#F8FAFC,#334155,Dark bg + green positive indicators
+8,Analytics Dashboard,#1E40AF,#3B82F6,#F59E0B,#F8FAFC,#1E3A8A,#DBEAFE,Blue data + amber highlights
+9,Healthcare App,#0891B2,#22D3EE,#059669,#ECFEFF,#164E63,#A5F3FC,Calm cyan + health green
+10,Educational App,#4F46E5,#818CF8,#F97316,#EEF2FF,#1E1B4B,#C7D2FE,Playful indigo + energetic orange
+11,Creative Agency,#EC4899,#F472B6,#06B6D4,#FDF2F8,#831843,#FBCFE8,Bold pink + cyan accent
+12,Portfolio/Personal,#18181B,#3F3F46,#2563EB,#FAFAFA,#09090B,#E4E4E7,Monochrome + blue accent
+13,Gaming,#7C3AED,#A78BFA,#F43F5E,#0F0F23,#E2E8F0,#4C1D95,Neon purple + rose action
+14,Government/Public Service,#0F172A,#334155,#0369A1,#F8FAFC,#020617,#E2E8F0,High contrast navy + blue
+15,Fintech/Crypto,#F59E0B,#FBBF24,#8B5CF6,#0F172A,#F8FAFC,#334155,Gold trust + purple tech
+16,Social Media App,#E11D48,#FB7185,#2563EB,#FFF1F2,#881337,#FECDD3,Vibrant rose + engagement blue
+17,Productivity Tool,#0D9488,#14B8A6,#F97316,#F0FDFA,#134E4A,#99F6E4,Teal focus + action orange
+18,Design System/Component Library,#4F46E5,#6366F1,#F97316,#EEF2FF,#312E81,#C7D2FE,Indigo brand + doc hierarchy
+19,AI/Chatbot Platform,#7C3AED,#A78BFA,#06B6D4,#FAF5FF,#1E1B4B,#DDD6FE,AI purple + cyan interactions
+20,NFT/Web3 Platform,#8B5CF6,#A78BFA,#FBBF24,#0F0F23,#F8FAFC,#4C1D95,Purple tech + gold value
+21,Creator Economy Platform,#EC4899,#F472B6,#F97316,#FDF2F8,#831843,#FBCFE8,Creator pink + engagement orange
+22,Sustainability/ESG Platform,#059669,#10B981,#0891B2,#ECFDF5,#064E3B,#A7F3D0,Nature green + ocean blue
+23,Remote Work/Collaboration Tool,#6366F1,#818CF8,#10B981,#F5F3FF,#312E81,#E0E7FF,Calm indigo + success green
+24,Mental Health App,#8B5CF6,#C4B5FD,#10B981,#FAF5FF,#4C1D95,#EDE9FE,Calming lavender + wellness green
+25,Pet Tech App,#F97316,#FB923C,#2563EB,#FFF7ED,#9A3412,#FED7AA,Playful orange + trust blue
+26,Smart Home/IoT Dashboard,#1E293B,#334155,#22C55E,#0F172A,#F8FAFC,#475569,Dark tech + status green
+27,EV/Charging Ecosystem,#0891B2,#22D3EE,#22C55E,#ECFEFF,#164E63,#A5F3FC,Electric cyan + eco green
+28,Subscription Box Service,#D946EF,#E879F9,#F97316,#FDF4FF,#86198F,#F5D0FE,Excitement purple + urgency orange
+29,Podcast Platform,#1E1B4B,#312E81,#F97316,#0F0F23,#F8FAFC,#4338CA,Dark audio + warm accent
+30,Dating App,#E11D48,#FB7185,#F97316,#FFF1F2,#881337,#FECDD3,Romantic rose + warm orange
+31,Micro-Credentials/Badges Platform,#0369A1,#0EA5E9,#CA8A04,#F0F9FF,#0C4A6E,#BAE6FD,Trust blue + achievement gold
+32,Knowledge Base/Documentation,#475569,#64748B,#2563EB,#F8FAFC,#1E293B,#E2E8F0,Neutral grey + link blue
+33,Hyperlocal Services,#059669,#10B981,#F97316,#ECFDF5,#064E3B,#A7F3D0,Location green + action orange
+34,Beauty/Spa/Wellness Service,#EC4899,#F9A8D4,#8B5CF6,#FDF2F8,#831843,#FBCFE8,Soft pink + lavender luxury
+35,Luxury/Premium Brand,#1C1917,#44403C,#CA8A04,#FAFAF9,#0C0A09,#D6D3D1,Premium black + gold accent
+36,Restaurant/Food Service,#DC2626,#F87171,#CA8A04,#FEF2F2,#450A0A,#FECACA,Appetizing red + warm gold
+37,Fitness/Gym App,#F97316,#FB923C,#22C55E,#1F2937,#F8FAFC,#374151,Energetic orange + action green

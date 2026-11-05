@@ -26,13 +26,36 @@
 
 ---
 
-## 📸 2. Demo & Preview
+## 📸 2. Demo & Preview: The Power of Multi-Direction & Craft
 
-<p align="center">
-  <img src="assets/preview.png" alt="Frontend Design Mastery Telemetry Preview" width="100%" />
-</p>
+Skill ini bukan template untuk satu genre saja. Ia dirancang untuk merancang antarmuka apa pun—mulai dari Landing Page SaaS, E-Commerce, Portofolio Editorial, hingga Dashboard Aplikasi—dengan standar estetika tinggi tanpa terjebak *AI-slop*:
 
-> **Sample Output:** Komponen *Institutional Liquidity Gateway* berstandar High-Craft Telemetry yang digenerate oleh skill ini. Memiliki hierarki visual hening, *hairline borders* tipis (`rgba(255,255,255,0.08)`), tipografi monospaced tabular, dan nol elemen *AI-slop*.
+```text
+┌────────────────────────────────────────┐   ┌────────────────────────────────────────┐
+│ DIRECTION A: MINIMALIST SAAS HERO      │   │ DIRECTION B: MODERN COMPONENT CRAFT    │
+├────────────────────────────────────────┤   ├────────────────────────────────────────┤
+│ HYPERTHINK.                            │   │ ✦ OPTICAL ALIGNMENT & MOTION           │
+│                                        │   │                                        │
+│ The canvas for engineers               │   │ • Spring Physics : { m:0.8, k:280 }    │
+│ who think in systems.                  │   │ • Exit Velocity  : 30% Faster          │
+│                                        │   │ • Border Radius  : 6px (Crisp)         │
+│ [ Claim your workspace ➔ ]             │   │                                        │
+│ No credit card required. Free tier.    │   │ [ ▶ Play Micro-Interaction ]           │
+└────────────────────────────────────────┘   └────────────────────────────────────────┘
+```
+
+<details>
+<summary><strong>👉 Klik di sini untuk melihat perbandingan Before vs After (AI Biasa vs Frontend Mastery)</strong></summary>
+
+| Komponen | Output AI Biasa (AI-Slop) ❌ | Output Frontend Mastery ✅ |
+| :--- | :--- | :--- |
+| **Tombol CTA** | `bg-gradient-to-r from-purple-500 to-blue-500 rounded-full shadow-2xl` | `bg-emerald-500 hover:bg-emerald-400 active:scale-[0.98] rounded-lg shadow-sm font-medium` |
+| **Teks Tombol** | *"Get Started"* atau *"Click Here"* (Klise & Generik) | *"Start building free"* atau *"Deploy to production"* (Action Verbs) |
+| **Border & Card** | `shadow-2xl border-none` (Semua card melayang aneh) | `border border-white/[0.08] hover:border-white/[0.18]` (Elegan & Hening) |
+| **Tipografi** | Inter/Poppins tanpa optical tuning | Pasangan terkurasi (misal: Satoshi / Outfit) + negative tracking `-0.025em` |
+| **Motion** | `transition: all 0.2s ease` (Kaku & robotik) | Spring Physics `{ mass: 0.8, stiffness: 280, damping: 24 }` |
+
+</details>
 
 ---
 
